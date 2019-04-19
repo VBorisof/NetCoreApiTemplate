@@ -1,0 +1,16 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetCoreApiTemplate", "NetCoreApiTemplate\NetCoreApiTemplate.csproj", "{0A8092AA-142B-48BB-81DB-51B6CA080525}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0A8092AA-142B-48BB-81DB-51B6CA080525}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0A8092AA-142B-48BB-81DB-51B6CA080525}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0A8092AA-142B-48BB-81DB-51B6CA080525}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0A8092AA-142B-48BB-81DB-51B6CA080525}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

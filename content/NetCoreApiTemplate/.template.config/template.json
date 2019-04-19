@@ -1,0 +1,13 @@
+{
+    "$schema": "http://json.schemastore.org/template",
+    "author": "VBorisof",
+    "classifications": ["Web"],
+    "identity": "NetCoreApiTemplate",
+    "name": ".NET Core Web API",
+    "shortName": "WAPI",
+    "tags": {
+        "language": "C#",
+        "type": "project"
+    },
+    "sourceName": "NetCoreApiTemplate"
+}

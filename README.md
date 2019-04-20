@@ -22,5 +22,6 @@ Projects generated using this template will have the following structure (some m
 |__Services
     |__Shared
         |__ServiceOperationResult -- Generic service result 
+```
 
 Install from NuGet: https://www.nuget.org/packages/VBorisof.NetCoreApiTemplate

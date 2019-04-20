@@ -21,5 +21,5 @@ Projects generated using this template will have the following structure (some m
 |
 |__Services
     |__Shared
-        |__ServiceOperationResult -- Generic service result 
+         |__ServiceOperationResult -- Generic service result 
 ```

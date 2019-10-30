@@ -11,11 +11,6 @@
     </ItemGroup>
 
     <ItemGroup>
-      <Folder Include="Forms" />
-      <Folder Include="ViewModels" />
-    </ItemGroup>
-
-    <ItemGroup>
       <Compile Include=".template.config\template.json" />
     </ItemGroup>
 

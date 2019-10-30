@@ -1,3 +1,4 @@
+using System.Net;
 using Microsoft.AspNetCore.Mvc;
 using NetCoreApiTemplate.Services.Shared;
 
@@ -9,22 +10,64 @@ namespace NetCoreApiTemplate.Extensions
             this ControllerBase controllerBase, ServiceOperationResult<TData> result
         )
         {
-            if (!result.IsSuccessful)
+            switch (result.StatusCode)
             {
-                return controllerBase.BadRequest(result.Errors);
+                case HttpStatusCode.OK:
+                    return controllerBase.Ok(result.Data);
+                
+                case HttpStatusCode.Accepted:
+                    return controllerBase.Accepted();
+                
+                case HttpStatusCode.Unauthorized:
+                    return controllerBase.Unauthorized();
+                
+                case HttpStatusCode.NotFound:
+                    return controllerBase.NotFound(result.Errors);
+                
+                case HttpStatusCode.Conflict:
+                    return controllerBase.Conflict(result.Errors);
+                
+                case HttpStatusCode.UnprocessableEntity:
+                    return controllerBase.UnprocessableEntity(result.Errors);
+                
+                case HttpStatusCode.NotImplemented:
+                    return controllerBase.StatusCode((int) result.StatusCode, result.Errors);
+                
+                default:
+                    return controllerBase.BadRequest(result.Errors);
             }
-            return controllerBase.Ok(result.Data);
         }
         
-        public static ActionResult FromServiceOperationResult(
+        public static ActionResult FromServiceOperationResult (
             this ControllerBase controllerBase, ServiceOperationResult result
         )
         {
-            if (!result.IsSuccessful)
+            switch (result.StatusCode)
             {
-                return controllerBase.BadRequest(result.Errors);
+                case HttpStatusCode.OK:
+                    return controllerBase.Ok();
+
+                case HttpStatusCode.Accepted:
+                    return controllerBase.Accepted();
+                
+                case HttpStatusCode.Unauthorized:
+                    return controllerBase.Unauthorized();
+                
+                case HttpStatusCode.NotFound:
+                    return controllerBase.NotFound(result.Errors);
+                
+                case HttpStatusCode.Conflict:
+                    return controllerBase.Conflict(result.Errors);
+                
+                case HttpStatusCode.UnprocessableEntity:
+                    return controllerBase.UnprocessableEntity(result.Errors);
+                
+                case HttpStatusCode.NotImplemented:
+                    return controllerBase.StatusCode((int) result.StatusCode, result.Errors);
+                
+                default:
+                    return controllerBase.BadRequest(result.Errors);
             }
-            return controllerBase.Ok();
         }
     }
 }

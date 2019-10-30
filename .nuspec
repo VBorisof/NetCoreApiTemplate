@@ -5,7 +5,7 @@
         <id>VBorisof.NetCoreApiTemplate</id>
 
         <!-- The package version number that is used when resolving dependencies -->
-        <version>0.1.0</version>
+        <version>0.2.0</version>
 
         <!-- Authors contain text that appears directly on the gallery -->
         <authors>Seva Borisoff</authors>
@@ -20,7 +20,7 @@
         <projectUrl>http://github.com/vborisof/netcoreapitemplate</projectUrl>
 
          <!-- License information is displayed on the gallery -->
-        <license type="expression">MIT</license>
+        <licenseUrl>http://www.wtfpl.net/</licenseUrl>
         
         <!-- 
             If true, this value prompts the user to accept the license when

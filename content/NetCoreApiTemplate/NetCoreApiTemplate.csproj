@@ -4,10 +4,10 @@
         <TargetFramework>net5.0</TargetFramework>
         <AspNetCoreHostingModel>InProcess</AspNetCoreHostingModel>
         <Nullable>enable</Nullable>
+        <IsPackable>true</IsPackable>
     </PropertyGroup>
 
     <ItemGroup>
-      <Folder Include="Extensions\Pagination" />
       <Folder Include="Forms" />
       <Folder Include="ViewModels" />
     </ItemGroup>

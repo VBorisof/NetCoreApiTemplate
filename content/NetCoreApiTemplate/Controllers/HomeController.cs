@@ -1,8 +1,9 @@
-﻿using System.Threading.Tasks;
+﻿using System.Net;
 using Microsoft.AspNetCore.Mvc;
 using NetCoreApiTemplate.Extensions;
-using NetCoreApiTemplate.Forms;
 using NetCoreApiTemplate.Services;
+using NetCoreApiTemplate.Services.Shared;
+using Swashbuckle.AspNetCore.Annotations;
 
 namespace NetCoreApiTemplate.Controllers
 {
@@ -20,19 +21,13 @@ namespace NetCoreApiTemplate.Controllers
         
         // GET api/home
         [HttpGet]
+        [SwaggerResponse((int) HttpStatusCode.OK, "Okay", typeof(string))]
+        [SwaggerResponse((int) HttpStatusCode.Conflict, "Conflict", typeof(ErrorResult))]
+        [SwaggerResponse((int) HttpStatusCode.BadRequest, "Bad Request", typeof(ErrorResult))]
         public IActionResult Get()
         {
-            return this.FromServiceOperationResult(
+            return this.FromServiceResult(
                 _homeService.GetHome()
-            );
-        }
-        
-        // POST api/home/numbers
-        [HttpPost]
-        public async Task<IActionResult> GetNumbersAsync([FromBody] NumbersForm form)
-        {
-            return this.FromServiceOperationResult(
-                await _homeService.GetNumbersAsync(form)
             );
         }
     }

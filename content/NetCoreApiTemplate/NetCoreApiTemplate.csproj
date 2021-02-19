@@ -1,17 +1,21 @@
 <Project Sdk="Microsoft.NET.Sdk.Web">
 
     <PropertyGroup>
-        <TargetFramework>netcoreapp2.2</TargetFramework>
+        <TargetFramework>net5.0</TargetFramework>
         <AspNetCoreHostingModel>InProcess</AspNetCoreHostingModel>
+        <Nullable>enable</Nullable>
     </PropertyGroup>
 
     <ItemGroup>
-        <PackageReference Include="Microsoft.AspNetCore.App" />
-        <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.2.0" PrivateAssets="All" />
+      <Folder Include="Extensions\Pagination" />
+      <Folder Include="Forms" />
+      <Folder Include="ViewModels" />
     </ItemGroup>
 
     <ItemGroup>
-      <Compile Include=".template.config\template.json" />
+      <PackageReference Include="Swashbuckle.AspNetCore.Annotations" Version="6.0.7" />
+      <PackageReference Include="Swashbuckle.AspNetCore.SwaggerGen" Version="6.0.7" />
+      <PackageReference Include="Swashbuckle.AspNetCore.SwaggerUI" Version="6.0.7" />
     </ItemGroup>
 
 </Project>

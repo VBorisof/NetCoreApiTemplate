@@ -1,5 +1,6 @@
 using System;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.Extensions.Hosting;
 
 namespace NetCoreApiTemplate.Extensions
 {
@@ -8,7 +9,7 @@ namespace NetCoreApiTemplate.Extensions
         public static bool IsDevelopment()
         {
             var environment = Environment.GetEnvironmentVariable("ASPNETCORE_ENVIRONMENT");
-            return environment == EnvironmentName.Development;
+            return environment == Environments.Development;
         }
     }
 }
